@@ -85,7 +85,7 @@ stock bool IsOnTeam(int client) {
 }
 
 stock bool IsConnected(int client) {
-    return client > 0 && client <= MaxClients && IsClientConnected(client) && !IsFakeClient(client);
+    return client > 0 && client <= MaxClients && IsClientConnected(client);
 }
 
 /**
@@ -101,7 +101,7 @@ stock bool IsValidClient(int client) {
  * Function to identify if a client is valid and in game.
  */
 stock bool IsPlayer(int client) {
-    return IsValidClient(client) && !IsFakeClient(client);
+    return IsValidClient(client);
 }
 
 stock void AddMenuOption(Menu menu, const char[] info, const char[] display, any ...) {
